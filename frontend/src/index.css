@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  place-items: center;
+}
+
+.sidemenu {
+  width: 25%;
+  background: linear-gradient(200deg, rgb(20, 20, 30), rgb(10, 10, 15));
+}
+
+.content {
+  width: 75%;
+  background: linear-gradient(200deg, rgb(20, 20, 30), rgb(10, 10, 15));
+}

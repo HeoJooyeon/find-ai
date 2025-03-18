@@ -1,0 +1,85 @@
+.sidemenu-page {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: start;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+.sidemenu-page-btn {
+  width: 50%;
+  height: 3rem;
+  background: linear-gradient(160deg, rgb(40, 60, 120), rgb(20, 30, 60));
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.sidemenu-page-btn:active {
+  transform: scale(0.9);
+}
+
+.sidemenu-header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgb(40, 125, 215);
+}
+
+.sidemenu-main {
+  padding: 1rem;
+  line-height: 4rem;
+  height: 80vh;
+  width: 100%;
+  background: rgb(40, 125, 215);
+}
+
+.sidemenu-main button {
+  width: 100%;
+}
+
+.sidemenu-footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(40, 125, 215);
+}
+
+.sidemenu-span {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.sidemenu-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.copyright {
+  text-align: left;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 20px;
+}
+
+.copyright a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
