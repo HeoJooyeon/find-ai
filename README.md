@@ -1,12 +1,37 @@
-# React + Vite
+# 🔍 FindAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FindAI is a personal project built with **React + Vite** and powered by the **OpenAI API**.  
+It provides AI-powered utilities to enhance productivity and automate tasks.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ **AI-Powered Utilities**: Leverage OpenAI's powerful AI models.
+- ⚡ **Built with React + Vite**: Fast and optimized development environment.
+- 🎨 **Modern UI**: Clean and user-friendly interface.
+- 🌐 **Fast & Lightweight**: Optimized for performance.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Vite
+- **Backend**: OpenAI API
+
+## 📦 Installation
+
+To set up the project locally, follow these steps:
+
+```sh
+# Clone the repository
+git clone https://github.com/HeoJooyeon/FindAI.git
+
+# Navigate to the project folder
+cd FindAI
+
+# Navigate to the frontend folder
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
