@@ -55,15 +55,17 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
               Authorization: `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-              model: "gpt-4o-mini",
+              model: "gpt-4-turbo",
               messages: [
+                {
+                  role: "system",
+                  content:
+                    "If the provided image contains Chinese characters (Hanzi/Kanji), translate them accurately into English or Korean and clearly explain their meanings.",
+                },
                 {
                   role: "user",
                   content: [
-                    {
-                      type: "text",
-                      text: inputValue,
-                    },
+                    { type: "text", text: inputValue },
                     {
                       type: "image_url",
                       image_url: {

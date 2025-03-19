@@ -65,7 +65,8 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [
-              { role: "user", content: requestData + "\n:" + instructionText },
+              { role: "system", content: instructionText },
+              { role: "user", content: requestData },
             ],
             max_tokens: 3000,
           }),

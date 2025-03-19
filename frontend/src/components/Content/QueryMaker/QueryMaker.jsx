@@ -56,7 +56,8 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [
-              { role: "user", content: requestData + " " + inputValue },
+              { role: "system", content: inputValue },
+              { role: "user", content: requestData },
             ],
             max_tokens: 3000,
           }),
