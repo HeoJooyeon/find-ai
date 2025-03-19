@@ -6,6 +6,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
   const [inputValue, setInputValue] = useState("");
   const [selectedOption, setSelectedOption] = useState("url-encoder");
   const [instructionText, setInstructionText] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const savedTexts = JSON.parse(localStorage.getItem("uploadedTexts")) || [];
@@ -51,6 +52,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       console.error(`EncoderTool::Not API Setting apiKey: ${apiKey}`);
       return;
     }
+    setLoading(true);
     const requestData = inputValue;
     console.log("EncoderTool::Sending:", requestData + ":" + instructionText);
     try {
@@ -80,6 +82,8 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     } catch (error) {
       console.error("EncoderTool::Error fetching response:", error);
       updateEncDec("EncoderTool::Response Fail");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -189,7 +193,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-footer">
         <form className="msg-form" onSubmit={(e) => e.preventDefault()}>
-          <i className="fa-solid fa-face-smile emoji"></i>
+          <i className="bx bx-wink-smile emoji"></i>
           <input
             type="text"
             className="msg-input"
@@ -209,13 +213,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
             <option value="base64-decoder">Base64 Decoder</option>
           </select>
           <label className="send-table">
-            {
-              <p>
-                {selectedOption.toUpperCase()}
-                <br />
-                Send
-              </p>
-            }
+            {loading ? <i className="bx bx-loader bx-spin"></i> : "Action"}
             <button
               className="hidden-input"
               onClick={() => sendEncDec(inputValue)}

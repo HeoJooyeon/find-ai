@@ -6,6 +6,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
   const [inputValue, setInputValue] = useState(
     "Tell me in Korean what's in this image."
   );
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const savedImages =
@@ -44,6 +45,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
         console.error(`ScanImage::Not API Setting apiKey: ${apiKey}`);
         return;
       }
+      setLoading(true);
       console.log("ScanImage::Sending:", inputValue);
       try {
         const response = await fetch(
@@ -88,6 +90,8 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
       } catch (error) {
         console.error("ScanImage::Error fetching response:", error);
         updateImages("ScanImage::Response Fail");
+      } finally {
+        setLoading(false);
       }
     };
     reader.readAsDataURL(file);
@@ -205,15 +209,15 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-footer">
         <div className="scan-header">
-          <i className="fa-solid fa-face-smile emoji"></i>
+          <i className="bx bx-laugh emoji"></i>
           <input
             type="text"
             className="msg-input"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <label className="scan-select">
-            Choose File
+          <label className="send-table">
+            {loading ? <i className="bx bx-loader bx-spin"></i> : "Action"}
             <input
               type="file"
               accept="image/*"

@@ -25,27 +25,6 @@
   background-color: Silver;
 }
 
-.scan-select {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background-color: #7b8ebc;
-  border: 2px solid #5a72a5;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.scan-select:hover {
-  background-color: #5a72a5;
-}
-
-.scan-select:active {
-  transform: scale(0.9);
-}
-
 .image-list {
   margin-top: 3rem;
   display: flex;

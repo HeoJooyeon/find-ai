@@ -47,6 +47,7 @@
   font-size: 2.5rem;
   color: white;
   cursor: pointer;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .home:active,
@@ -101,20 +102,22 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  background-color: #7b8ebc;
-  border: 2px solid #5a72a5;
+  background-color: #ffd700; /* 골드 (눈에 띄는 색상) */
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .send-table:hover {
-  background-color: #5a72a5;
+  background-color: #ffc107; /* 더 밝은 골드 */
+  border-color: #daa520; /* 테두리도 변경 */
+  transform: scale(1.05);
 }
 
 .send-table:active {
-  transform: scale(0.9);
+  background-color: #ffa000; /* 클릭 시 색 변화 */
+  transform: scale(0.95);
 }
 
 .hidden-input {

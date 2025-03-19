@@ -20,6 +20,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
     ],
   });
   const maxColumn = 10;
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const savedMessages =
@@ -42,6 +43,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
       console.error(`QueryMaker::Not API Setting apiKey: ${apiKey}`);
       return;
     }
+    setLoading(true);
     const requestData = queryData.trim() || JSON.stringify(fields, null, 2);
     console.log("QueryMaker::Sending:", requestData + " " + inputValue);
     try {
@@ -71,6 +73,8 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
     } catch (error) {
       console.error("QueryMaker::Error fetching response:", error);
       updateMessages("QueryMaker::Response Fail");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -340,7 +344,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
       <div className="content-footer">
         <form className="msg-form" onSubmit={(e) => e.preventDefault()}>
-          <i className="fa-solid fa-face-smile emoji"></i>
+          <i className="bx bx-cool emoji"></i>
           <input
             type="text"
             className="msg-input"
@@ -348,7 +352,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
             onChange={(e) => setInputValue(e.target.value)}
           />
           <label className="send-table">
-            Send Table
+            {loading ? <i className="bx bx-loader bx-spin"></i> : "Action"}
             <button className="hidden-input" onClick={sendMessage} />
           </label>
         </form>
