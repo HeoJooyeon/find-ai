@@ -9,6 +9,7 @@ It provides AI-powered utilities to enhance productivity and automate tasks.
 - ⚡ **Built with React + Vite**: Fast and optimized development environment.
 - 🎨 **Modern UI**: Clean and user-friendly interface.
 - 🌐 **Fast & Lightweight**: Optimized for performance.
+- 💾 **Local Storage Management**: Save and delete data efficiently using local storage.
 
 ## 🛠️ Tech Stack
 
@@ -35,3 +36,11 @@ npm install
 # Start the development server
 npm run dev
 ```
+
+## 📌 Menu Overview
+
+1. **Query Maker (Generate Sample Queries)**: Query Maker generates INSERT statements based on the provided table information and saves query data using local storage.
+2. **Scan Image (Image Search)**: Scan Image analyzes a photo and provides a description of its contents.
+3. **Encoder Tool (Encoding Utility)**: Encoder Tool encodes URL and Base64 values and allows users to save encoded data in local storage.
+4. **Color Mixer (Color Combination)**: Color Mixer helps you find the perfect color by blending different shades and stores your preferred combinations in local storage.
+5. **JSON Repair (JSON Fixing)**: JSON Repair analyzes and corrects structural errors in JSON data, with an option to save the fixed JSON in local storage.
