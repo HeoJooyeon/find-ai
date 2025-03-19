@@ -6,13 +6,15 @@ const ContentHome = () => {
     <div className="content-page">
       <div className="content-header"></div>
       <div className="content-main">
-        <video
-          className="content-background"
-          src="/chatgpt.mp4"
-          autoPlay
-          loop
-          muted
-        />
+        <div className="video-container">
+          <video
+            className="content-background"
+            src="/chatgpt.mp4"
+            autoPlay
+            loop
+            muted
+          />
+        </div>
       </div>
       <div className="content-footer"></div>
     </div>

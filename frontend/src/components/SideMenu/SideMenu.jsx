@@ -6,23 +6,39 @@ const SideMenu = ({ isMenu, setIsMenu }) => {
     <div className="sidemenu-page">
       <div className="sidemenu-header">
         <span className="sidemenu-span">
-          <img className="sidemenu-icon" src="/gpt.svg" /> GPT Utility
+          <img className="sidemenu-icon" src="/gpt.svg" alt="GPT Logo" /> GPT
+          Utility
         </span>
       </div>
       <div className="sidemenu-main">
-        <button className="sidemenu-page-btn" onClick={() => setIsMenu(1)}>
+        <button
+          className={`sidemenu-page-btn ${isMenu === 1 ? "active" : ""}`}
+          onClick={() => setIsMenu(1)}
+        >
           Query Maker
         </button>
-        <button className="sidemenu-page-btn" onClick={() => setIsMenu(2)}>
+        <button
+          className={`sidemenu-page-btn ${isMenu === 2 ? "active" : ""}`}
+          onClick={() => setIsMenu(2)}
+        >
           Scan Image
         </button>
-        <button className="sidemenu-page-btn" onClick={() => setIsMenu(3)}>
+        <button
+          className={`sidemenu-page-btn ${isMenu === 3 ? "active" : ""}`}
+          onClick={() => setIsMenu(3)}
+        >
           Encoder Tool
         </button>
-        <button className="sidemenu-page-btn" onClick={() => setIsMenu(4)}>
+        <button
+          className={`sidemenu-page-btn ${isMenu === 4 ? "active" : ""}`}
+          onClick={() => setIsMenu(4)}
+        >
           Color Mixer
         </button>
-        <button className="sidemenu-page-btn" onClick={() => setIsMenu(5)}>
+        <button
+          className={`sidemenu-page-btn ${isMenu === 5 ? "active" : ""}`}
+          onClick={() => setIsMenu(5)}
+        >
           JSON Repair
         </button>
       </div>

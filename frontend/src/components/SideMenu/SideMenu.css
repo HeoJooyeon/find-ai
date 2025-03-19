@@ -21,8 +21,14 @@
   cursor: pointer;
 }
 
-.sidemenu-page-btn:active {
+.sidemenu-page-btn:hover {
+  background: linear-gradient(160deg, rgb(60, 90, 180), rgb(30, 45, 90));
   transform: scale(0.9);
+}
+
+.sidemenu-page-btn.active {
+  background: linear-gradient(160deg, rgb(50, 205, 50), rgb(144, 238, 144));
+  font-weight: bold;
 }
 
 .sidemenu-header {
@@ -32,7 +38,6 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  background: rgb(40, 125, 215);
 }
 
 .sidemenu-main {
@@ -40,7 +45,6 @@
   line-height: 4rem;
   height: 80vh;
   width: 100%;
-  background: rgb(40, 125, 215);
 }
 
 .sidemenu-main button {
@@ -53,7 +57,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(40, 125, 215);
 }
 
 .sidemenu-span {

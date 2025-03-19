@@ -9,14 +9,13 @@
   height: 100vh;
   display: flex;
   place-items: center;
+  background: linear-gradient(135deg, #2aa8a0, #144a9e, #102e72);
 }
 
 .sidemenu {
   width: 25%;
-  background: linear-gradient(200deg, rgb(20, 20, 30), rgb(10, 10, 15));
 }
 
 .content {
   width: 75%;
-  background: linear-gradient(200deg, rgb(20, 20, 30), rgb(10, 10, 15));
 }

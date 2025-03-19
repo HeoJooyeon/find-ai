@@ -14,7 +14,6 @@
   align-items: center;
   padding-left: 3.5rem;
   padding-right: 5rem;
-  background: rgb(40, 125, 215);
 }
 
 .content-span {
@@ -34,7 +33,6 @@
   user-select: none;
   display: flex;
   overflow-y: auto;
-  background: rgb(40, 125, 215);
 }
 
 .content-footer {
@@ -42,7 +40,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(40, 125, 215);
 }
 
 .home,
