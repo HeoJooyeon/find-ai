@@ -60,7 +60,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
                 {
                   role: "system",
                   content:
-                    "If the provided image contains Chinese characters (Hanzi/Kanji), translate them accurately into English or Korean and clearly explain their meanings.",
+                    "You are an assistant who analyzes provided images. If an image contains Chinese characters (Hanzi/Kanji), translate them accurately into English or Korean and provide detailed context and explanation. Begin your response immediately and directly with detailed descriptions or translations. Do NOT use ANY introductory or overview expressions, such as '이 이미지는', '이 이미지에는', '이미지에는', '사진에는', 'In this image', 'The image shows', or any similar phrases. Your response should be descriptive, insightful, context-rich, and at least approximately 300 characters.",
                 },
                 {
                   role: "user",
