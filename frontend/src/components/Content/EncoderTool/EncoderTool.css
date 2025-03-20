@@ -11,6 +11,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   outline: none;
+  margin-right: 1rem;
 }
 
 .custom-select:hover {
@@ -75,4 +76,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.msg-input-textarea {
+  width: 100%;
+  min-height: 40px;
+  max-height: 300px;
+  padding: 10px;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  line-height: 1.5;
+  resize: none;
+  overflow: hidden;
+  flex-grow: 1;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  overflow-y: auto;
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+.msg-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.msg-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: white;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.msg-input-textarea:focus + .msg-placeholder,
+.msg-input-textarea:not(:placeholder-shown) + .msg-placeholder {
+  opacity: 0;
 }

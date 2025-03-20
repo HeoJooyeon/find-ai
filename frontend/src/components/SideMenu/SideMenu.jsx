@@ -43,7 +43,7 @@ const SideMenu = ({ isMenu, setIsMenu }) => {
         </button>
       </div>
       <div className="sidemenu-footer">
-        <p class="copyright">
+        <p className="copyright">
           Created by:{" "}
           <a href="mailto:starringname@naver.com">starringname@naver.com</a>
           <br />

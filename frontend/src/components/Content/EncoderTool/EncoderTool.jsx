@@ -124,6 +124,12 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     }
   };
 
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+    e.target.style.height = "auto";
+    e.target.style.height = `${e.target.scrollHeight}px`;
+  };
+
   return (
     <div className="content-page">
       <div className="content-header">
@@ -193,14 +199,16 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-footer">
         <form className="msg-form" onSubmit={(e) => e.preventDefault()}>
-          <i className="bx bx-wink-smile emoji"></i>
-          <input
-            type="text"
-            className="msg-input"
-            placeholder="Type a message..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-          />
+          <div className="msg-input-wrapper">
+            <textarea
+              className="msg-input-textarea"
+              placeholder=" "
+              value={inputValue}
+              onChange={handleInput}
+              rows={1}
+            />
+            <span className="msg-placeholder">Type a message...</span>{" "}
+          </div>
           <select
             id="encoderDecoder"
             value={selectedOption}

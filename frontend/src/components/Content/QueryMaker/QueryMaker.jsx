@@ -344,7 +344,6 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
       <div className="content-footer">
         <form className="msg-form" onSubmit={(e) => e.preventDefault()}>
-          <i className="bx bx-cool emoji"></i>
           <input
             type="text"
             className="msg-input"

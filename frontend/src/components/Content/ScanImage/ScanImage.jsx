@@ -209,7 +209,6 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-footer">
         <div className="scan-header">
-          <i className="bx bx-laugh emoji"></i>
           <input
             type="text"
             className="msg-input"

@@ -33,6 +33,7 @@
   user-select: none;
   display: flex;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content-footer {
@@ -84,6 +85,7 @@
   border: none;
   font-size: 1.8rem;
   color: white;
+  margin-left: 2rem;
 }
 
 .msg-input::placeholder {
@@ -102,22 +104,18 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  background-color: #ffd700; /* 골드 (눈에 띄는 색상) */
+  background: linear-gradient(160deg, rgb(50, 205, 50), rgb(144, 238, 144));
   border-radius: 5px;
-  cursor: pointer;
+  cursor: default;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  caret-color: transparent;
 }
 
 .send-table:hover {
-  background-color: #ffc107; /* 더 밝은 골드 */
-  border-color: #daa520; /* 테두리도 변경 */
+  background: linear-gradient(160deg, rgb(40, 180, 40), rgb(120, 220, 120));
   transform: scale(1.05);
-}
-
-.send-table:active {
-  background-color: #ffa000; /* 클릭 시 색 변화 */
-  transform: scale(0.95);
 }
 
 .hidden-input {
@@ -126,7 +124,7 @@
 
 .txtarea {
   width: 100%;
-  min-height: 200px;
+  min-height: 100px;
   resize: none;
   border: 1px solid #ccc;
   border-radius: 8px;
