@@ -62,7 +62,7 @@ To use OpenAI's API, you need to obtain a **Secret Key** from OpenAI and store i
 1. **Query Maker (Generate Sample Queries)**: Query Maker generates INSERT statements based on the provided table information and saves query data using local storage.
 2. **Scan Image (Image Search)**: Scan Image analyzes a photo and provides a description of its contents.
 3. **Encoder Tool (Encoding Utility)**: Encoder Tool encodes URL and Base64 values and allows users to save encoded data in local storage.
-4. **Color Mixer (Color Combination)**: Color Mixer helps you find the perfect color by blending different shades and stores your preferred combinations in local storage.
+4. **Color Mixer (Color Combination)**: Color Mixer suggests the perfect background and text color combination based on your chosen theme, helping you create a harmonious design.
 5. **JSON Repair (JSON Fixing)**: JSON Repair analyzes and corrects structural errors in JSON data, with an option to save the fixed JSON in local storage.
 
 ---
@@ -131,7 +131,7 @@ OpenAI API를 사용하려면 OpenAI에서 **비밀 키(Secret Key)** 를 발급
 1. **쿼리 메이커 (Query Maker - 샘플 쿼리 생성)**: 테이블 정보를 기반으로 INSERT 문을 생성하고, 생성된 쿼리를 로컬 스토리지에 저장합니다.
 2. **이미지 스캔 (Scan Image - 이미지 검색)**: 사진을 분석하여 이미지의 내용을 설명해 줍니다.
 3. **인코더 도구 (Encoder Tool - 인코딩 유틸리티)**: URL 및 Base64 값을 인코딩하고, 변환된 데이터를 로컬 스토리지에 저장할 수 있습니다.
-4. **컬러 믹서 (Color Mixer - 색상 조합)**: 다양한 색상을 혼합하여 원하는 색상을 찾고, 조합을 로컬 스토리지에 저장할 수 있습니다.
+4. **컬러 믹서 (Color Mixer - 색상 조합)**: 원하는 주제를 입력하면 어울리는 배경색과 글자색을 추천하여 조화로운 디자인을 만드는 데 도움을 줍니다.
 5. **JSON 복구 (JSON Repair - JSON 오류 수정)**: JSON 데이터를 분석하여 구조적 오류를 수정하고, 수정된 JSON을 로컬 스토리지에 저장할 수 있습니다.
 
 ---

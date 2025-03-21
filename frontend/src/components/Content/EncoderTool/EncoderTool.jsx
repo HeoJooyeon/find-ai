@@ -84,6 +84,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       updateEncDec("EncoderTool::Response Fail");
     } finally {
       setLoading(false);
+      setInputValue("");
     }
   };
 

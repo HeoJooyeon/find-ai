@@ -136,9 +136,11 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
               {
                 role: "system",
                 content: `You are an AI assistant that generates color combinations based on a given theme. When the user provides a theme, generate exactly five color combinations. Each combination should include a background color and a text color.
-
+              
               The colors should be represented in three formats: HEX, RGB, and a descriptive color name. Ensure that the text color provides sufficient contrast against the background for readability.
-
+              
+              The RGB value must be in the format: rgb(R, G, B), for example, rgb(0, 0, 0).
+              
               Provide the response in the following JSON format:
               [
                 {
@@ -155,7 +157,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
                 },
                 ...
               ]
-
+              
               Always return exactly five color combinations that match the given theme.`,
               },
               { role: "user", content: inputValue },
@@ -175,6 +177,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
       updateColorTopic("ColorMixer::Response Fail");
     } finally {
       setLoading(false);
+      setInputValue("");
     }
   };
 
@@ -218,7 +221,8 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
     <div className="content-page">
       <div className="content-header">
         <span className="content-span">
-          Color Mixer는 원하는 색상을 조합하여 색상을 추천해주는 도구입니다.
+          Color Mixer는 원하는 주제를 입력하면 그에 어울리는 배경색과 글자색을
+          추천해주는 도구입니다.
         </span>
         <i className="bx bxs-home home" onClick={() => setIsMenu("")}></i>
       </div>
@@ -317,6 +321,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
               value={inputValue}
               onChange={handleInput}
               rows={1}
+              style={{ resize: "none", overflow: "hidden", height: "1.5em" }}
             />
             <span className="msg-placeholder">Type a message...</span>
           </div>

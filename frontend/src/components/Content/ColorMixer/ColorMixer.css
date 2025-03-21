@@ -9,8 +9,6 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  /* margin-bottom: 2rem !important;
-  row-gap: 0 !important; */
 }
 
 .color-container {
@@ -27,18 +25,6 @@
   padding: 2rem;
   gap: 1rem;
 }
-
-/* .content-color:nth-of-type(6n + 0),
-.content-color:nth-of-type(6n + 1),
-.content-color:nth-of-type(6n + 2),
-.content-color:nth-of-type(6n + 3),
-.content-color:nth-of-type(6n + 4) {
-  margin-bottom: 0 !important;
-}
-
-.content-color:nth-of-type(6n) {
-  margin-bottom: 10px !important;
-} */
 
 .color-row {
   display: flex;
@@ -74,7 +60,7 @@
 }
 
 .color-label textarea {
-  width: 120px;
+  width: 9rem;
   height: 35px;
   text-align: center;
   resize: none;
@@ -105,6 +91,7 @@
   color: white;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
+  margin-right: 0.5rem;
 }
 
 .copy-button:hover {
