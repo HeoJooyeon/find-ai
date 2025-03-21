@@ -9,8 +9,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const savedImages =
-      JSON.parse(localStorage.getItem("uploadedImages")) || [];
+    const savedImages = JSON.parse(localStorage.getItem("imageData")) || [];
     setImages(savedImages);
   }, []);
 
@@ -36,7 +35,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
 
       setImages((prevImages) => {
         const updatedImages = [...prevImages, newImage];
-        localStorage.setItem("uploadedImages", JSON.stringify(updatedImages));
+        localStorage.setItem("imageData", JSON.stringify(updatedImages));
         return updatedImages;
       });
 
@@ -108,7 +107,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
 
     setImages((prevImages) => {
       const updatedImages = [...prevImages, newResponse];
-      localStorage.setItem("uploadedImages", JSON.stringify(updatedImages));
+      localStorage.setItem("imageData", JSON.stringify(updatedImages));
       return updatedImages;
     });
 
@@ -118,7 +117,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
   const handleDeleteImage = (id) => {
     const updatedImages = images.filter((image) => image.id !== id);
     setImages(updatedImages);
-    localStorage.setItem("uploadedImages", JSON.stringify(updatedImages));
+    localStorage.setItem("imageData", JSON.stringify(updatedImages));
   };
 
   const clearAllImages = () => {
@@ -126,7 +125,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
       "Are you sure you want to delete all images?"
     );
     if (isConfirmed) {
-      localStorage.removeItem("uploadedImages");
+      localStorage.removeItem("imageData");
       setImages([]);
       console.log("ScanImage::All images removed.");
     } else {

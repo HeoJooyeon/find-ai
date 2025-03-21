@@ -36,8 +36,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
   }, [colorTopic]);
 
   useEffect(() => {
-    const savedColorTopic =
-      JSON.parse(localStorage.getItem("uploadedColorTopics")) || [];
+    const savedColorTopic = JSON.parse(localStorage.getItem("colorData")) || [];
     setColorTopic(savedColorTopic);
   }, []);
 
@@ -69,10 +68,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
         (_, index) => !indicesToDelete.includes(index)
       );
 
-      localStorage.setItem(
-        "uploadedColorTopics",
-        JSON.stringify(updatedTopics)
-      );
+      localStorage.setItem("colorData", JSON.stringify(updatedTopics));
 
       return updatedTopics;
     });
@@ -83,7 +79,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
       "Are you sure you want to delete all colors?"
     );
     if (isConfirmed) {
-      localStorage.removeItem("uploadedColorTopics");
+      localStorage.removeItem("colorData");
       setMergedTopics([]);
       console.log("ColorMixer::All colors removed.");
     } else {
@@ -107,10 +103,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
 
     setColorTopic((prevTopics) => {
       const updatedTopics = [...prevTopics, newTopics];
-      localStorage.setItem(
-        "uploadedColorTopics",
-        JSON.stringify(updatedTopics)
-      );
+      localStorage.setItem("colorData", JSON.stringify(updatedTopics));
       return updatedTopics;
     });
 
@@ -209,10 +202,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
 
     setColorTopic((prevTopics) => {
       const updatedColorTopics = [...(prevTopics ?? []), ...responseColors];
-      localStorage.setItem(
-        "uploadedColorTopics",
-        JSON.stringify(updatedColorTopics)
-      );
+      localStorage.setItem("colorData", JSON.stringify(updatedColorTopics));
       return updatedColorTopics;
     });
   };

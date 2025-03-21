@@ -9,7 +9,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const savedTexts = JSON.parse(localStorage.getItem("uploadedTexts")) || [];
+    const savedTexts = JSON.parse(localStorage.getItem("encoderData")) || [];
     setFmtText(savedTexts);
   }, []);
   useEffect(() => {
@@ -43,7 +43,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
 
     setFmtText((prevTexts) => {
       const updatedTexts = [...prevTexts, newText];
-      localStorage.setItem("uploadedTexts", JSON.stringify(updatedTexts));
+      localStorage.setItem("encoderData", JSON.stringify(updatedTexts));
       return updatedTexts;
     });
 
@@ -100,7 +100,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
 
     setFmtText((prevTexts) => {
       const updatedTexts = [...prevTexts, newResponse];
-      localStorage.setItem("uploadedTexts", JSON.stringify(updatedTexts));
+      localStorage.setItem("encoderData", JSON.stringify(updatedTexts));
       return updatedTexts;
     });
     console.log("EncoderTool::Updated response:", responseText);
@@ -109,7 +109,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
   const handleDeleteText = (id) => {
     const updatedTexts = fmtText.filter((ftxt) => ftxt.id !== id);
     setFmtText(updatedTexts);
-    localStorage.setItem("uploadedTexts", JSON.stringify(updatedTexts));
+    localStorage.setItem("encoderData", JSON.stringify(updatedTexts));
   };
 
   const clearAllTexts = () => {
@@ -117,7 +117,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       "Are you sure you want to delete all texts?"
     );
     if (isConfirmed) {
-      localStorage.removeItem("uploadedTexts");
+      localStorage.removeItem("encoderData");
       setFmtText([]);
       console.log("EncoderTool::All texts removed.");
     } else {

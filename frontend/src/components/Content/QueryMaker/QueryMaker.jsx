@@ -24,7 +24,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
   useEffect(() => {
     const savedMessages =
-      JSON.parse(localStorage.getItem("chatResponse")) || [];
+      JSON.parse(localStorage.getItem("insertSamples")) || [];
     setMessages(savedMessages);
     const savedFields = JSON.parse(localStorage.getItem("tableFields"));
     if (savedFields) {
@@ -88,7 +88,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
     setMessages((prevMessages) => {
       const updatedMessages = [...prevMessages, newResponse];
-      localStorage.setItem("chatResponse", JSON.stringify(updatedMessages));
+      localStorage.setItem("insertSamples", JSON.stringify(updatedMessages));
       return updatedMessages;
     });
 
@@ -134,7 +134,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
       "Are you sure you want to delete all messages?"
     );
     if (isConfirmed) {
-      localStorage.removeItem("chatResponse");
+      localStorage.removeItem("insertSamples");
       setMessages([]);
       console.log("QueryMaker::All messages removed.");
     } else {
@@ -168,7 +168,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
   const deleteMessage = (index) => {
     setMessages((prevMessages) => {
       const updatedMessages = prevMessages.filter((_, i) => i !== index);
-      localStorage.setItem("chatResponse", JSON.stringify(updatedMessages));
+      localStorage.setItem("insertSamples", JSON.stringify(updatedMessages));
       return updatedMessages;
     });
   };
