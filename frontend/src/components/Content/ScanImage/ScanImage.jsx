@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ScanImage.css";
+import { copyToClipboard } from "../../../utils/utils";
 
 const ScanImage = ({ isMenu, setIsMenu }) => {
   const [images, setImages] = useState([]);
@@ -191,6 +192,12 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
                     value={image.responseText}
                     readOnly
                   />
+                  <button
+                    className="copy-button"
+                    onClick={() => copyToClipboard(image.responseText)}
+                  >
+                    Copy
+                  </button>
                   <span>
                     {image.date} {image.timestamp}
                     <i

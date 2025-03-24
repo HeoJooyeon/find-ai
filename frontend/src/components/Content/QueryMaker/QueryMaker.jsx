@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./QueryMaker.css";
+import { copyToClipboard } from "../../../utils/utils";
 
 const QueryMaker = ({ isMenu, setIsMenu }) => {
   const [isJsonVisible, setIsJsonVisible] = useState(false);
@@ -332,6 +333,12 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
         {messages.map((msg, index) => (
           <div key={index} className="response">
             <textarea className="txtarea" value={msg.text} readOnly />
+            <button
+              className="copy-button"
+              onClick={() => copyToClipboard(msg.text)}
+            >
+              Copy
+            </button>
             <span>
               {msg.date} {msg.timestamp}
               <i

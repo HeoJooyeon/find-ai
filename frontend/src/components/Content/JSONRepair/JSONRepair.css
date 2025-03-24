@@ -1,6 +1,7 @@
 .text-container textarea {
   min-height: 25rem;
 }
+
 .json-txtarea {
   width: 100%;
   min-height: 15rem;
@@ -12,4 +13,10 @@
   background-color: black;
   color: white;
   border: 1px solid #444;
+}
+
+.json-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

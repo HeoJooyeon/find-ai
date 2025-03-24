@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./JSONRepair.css";
+import { copyToClipboard } from "../../../utils/utils";
 
 const JSONRepair = ({ isMenu, setIsMenu }) => {
   const [fmtJson, setFmtJson] = useState([]);
@@ -217,7 +218,14 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
                     value={JSON.stringify(fjson.after, null, 2)}
                     readOnly
                   />
-
+                  <button
+                    className="copy-button"
+                    onClick={() =>
+                      copyToClipboard(JSON.stringify(fjson.after, null, 2))
+                    }
+                  >
+                    Copy
+                  </button>
                   <span className="text-description">
                     <strong>
                       <u>Description</u> :&nbsp;

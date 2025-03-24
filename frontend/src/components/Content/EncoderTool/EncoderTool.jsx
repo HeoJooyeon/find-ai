@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./EncoderTool.css";
+import { copyToClipboard } from "../../../utils/utils";
 
 const EncoderTool = ({ isMenu, setIsMenu }) => {
   const [fmtText, setFmtText] = useState([]);
@@ -196,6 +197,12 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
               ) : (
                 <>
                   <textarea className="txtarea" value={ftxt.content} readOnly />
+                  <button
+                    className="copy-button"
+                    onClick={() => copyToClipboard(ftxt.content)}
+                  >
+                    Copy
+                  </button>
                   <span>
                     {ftxt.date} {ftxt.timestamp}
                     <i
