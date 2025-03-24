@@ -323,11 +323,19 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
             Add Column
           </i>
           {isJsonVisible && (
-            <textarea
-              className="txtarea"
-              value={JSON.stringify(fields, null, 2)}
-              readOnly
-            />
+            <div>
+              <textarea
+                className="txtarea"
+                value={JSON.stringify(fields, null, 2)}
+                readOnly
+              />
+              <button
+                className="copy-button"
+                onClick={() => copyToClipboard(JSON.stringify(fields, null, 2))}
+              >
+                Copy
+              </button>
+            </div>
           )}
         </div>
         {messages.map((msg, index) => (
