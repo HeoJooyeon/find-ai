@@ -174,6 +174,13 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
     });
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
+
   return (
     <div className="content-page">
       <div className="content-header">
@@ -365,6 +372,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
             className="msg-input"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <label className="send-table">
             {loading ? <i className="bx bx-loader bx-spin"></i> : "Action"}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ColorMixer.css";
+import { copyToClipboard } from "../../../utils/utils";
 
 const ColorMixer = ({ isMenu, setIsMenu }) => {
   const [inputValue, setInputValue] = useState("");
@@ -12,9 +13,11 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
     setInputValue(e.target.value);
   };
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    alert(`Copied: ${text}`);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendColorTopics(inputValue);
+    }
   };
 
   useEffect(() => {
@@ -318,6 +321,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
               onChange={handleInput}
               rows={1}
               style={{ resize: "none", overflow: "hidden", height: "1.5em" }}
+              onKeyDown={handleKeyDown}
             />
             <span className="msg-placeholder">Type a message...</span>
           </div>

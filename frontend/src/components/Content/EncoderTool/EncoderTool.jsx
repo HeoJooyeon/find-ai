@@ -137,6 +137,13 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     e.target.style.height = `${e.target.scrollHeight}px`;
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendEncDec(inputValue);
+    }
+  };
+
   return (
     <div className="content-page">
       <div className="content-header">
@@ -225,6 +232,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
               value={inputValue}
               onChange={handleInput}
               rows={1}
+              onKeyDown={handleKeyDown}
             />
             <span className="msg-placeholder">Type a message...</span>{" "}
           </div>

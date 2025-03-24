@@ -161,6 +161,13 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
     localStorage.setItem("jsonData", JSON.stringify(updatedJsons));
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendJson(inputValue);
+    }
+  };
+
   return (
     <div className="content-page">
       <div className="content-header">
@@ -264,6 +271,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
               value={inputValue}
               onChange={handleInput}
               rows={1}
+              onKeyDown={handleKeyDown}
             />
             <span className="msg-placeholder">Type a message...</span>{" "}
           </div>
