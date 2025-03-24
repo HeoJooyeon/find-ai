@@ -235,14 +235,6 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
                   </button>
                   <span className="text-description">
                     <strong>
-                      <u>Description</u> :&nbsp;
-                    </strong>
-                    <br />
-                    <br />
-                    {fjson.text}
-                  </span>
-                  <span className="text-description">
-                    <strong>
                       <u>설명</u> :&nbsp;
                     </strong>
                     <br />
