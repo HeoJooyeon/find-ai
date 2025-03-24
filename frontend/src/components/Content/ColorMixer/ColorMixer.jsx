@@ -211,15 +211,14 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
     <div className="content-page">
       <div className="content-header">
         <span className="content-span">
-          Color Mixer는 원하는 주제를 입력하면 그에 어울리는 배경색과 글자색을
-          추천해주는 도구입니다.
+          Color Mixer는 주제에 맞는 배경색과 글자색을 추천해주는 도구입니다.
         </span>
         <i className="bx bxs-home home" onClick={() => setIsMenu("")}></i>
       </div>
 
       <div className="content-main">
         <i className="bx bx-plus clear-btn" onClick={() => clearAllColors()}>
-          Clear Color
+          Clear Colors
         </i>
         <div className="select-wrapper">
           <label>Color Format: </label>
@@ -236,9 +235,14 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
         {mergedTopics.map((color, index) =>
           !color.isResponse ? (
             <div key={color.id || index} className="color-container">
-              <p>
-                <strong>Input Text:</strong> {color.content}
-              </p>
+              <span className="text-description">
+                <strong>
+                  <u>Input Text</u> :&nbsp;
+                </strong>
+                <br />
+                <br />
+                {color.content}
+              </span>
               <span>
                 {color.date} {color.timestamp}
                 <i

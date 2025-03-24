@@ -1,0 +1,15 @@
+.text-container textarea {
+  min-height: 25rem;
+}
+.json-txtarea {
+  width: 100%;
+  min-height: 25rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  background-color: black;
+  color: white;
+  border: 1px solid #444;
+}

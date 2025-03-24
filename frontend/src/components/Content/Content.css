@@ -124,16 +124,15 @@
 
 .txtarea {
   width: 100%;
-  min-height: 100px;
-  resize: none;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  min-height: 15rem;
   font-size: 1rem;
-  font-family: "Arial", sans-serif;
-  border: 2px solid linear-gradient(160deg, rgb(40, 60, 120), rgb(20, 30, 60));
+  font-family: "Roboto", sans-serif;
   border-radius: 8px;
   outline: none;
   resize: vertical;
+  background-color: black;
+  color: white;
+  border: 1px solid #444;
 }
 
 .response {
