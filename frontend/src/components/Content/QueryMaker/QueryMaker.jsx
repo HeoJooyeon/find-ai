@@ -188,6 +188,14 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
       </div>
 
       <div className="content-main">
+        <div className="btn-group">
+          <i className="bx bx-plus btn" onClick={() => clearAllPrompt()}>
+            Clear Prompt
+          </i>
+          <i className="bx bx-plus btn" onClick={() => clearAllMessages()}>
+            Clear Response
+          </i>
+        </div>
         <div className="prompt">
           <div className="prompt-title">
             <input
@@ -320,13 +328,6 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
               readOnly
             />
           )}
-          <br />
-          <i className="bx bx-plus btn" onClick={() => clearAllPrompt()}>
-            Clear Prompt
-          </i>
-          <i className="bx bx-plus btn" onClick={() => clearAllMessages()}>
-            Clear Response
-          </i>
         </div>
         {messages.map((msg, index) => (
           <div key={index} className="response">

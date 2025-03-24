@@ -26,7 +26,6 @@
 }
 
 .image-list {
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,13 +33,12 @@
 
 .image-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 0.5fr;
   align-items: center;
   font-size: 1.2rem;
   color: white;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-  width: 80%;
-  text-align: left;
+  width: 60%;
+  text-align: right;
   background: linear-gradient(160deg, rgb(90, 90, 90), rgb(40, 40, 40));
   border-radius: 3rem 3rem 0 3rem;
   margin-left: auto;
@@ -50,10 +48,11 @@
 
 .prompt-view {
   margin-left: 1rem;
-  width: 150px;
-  height: 150px;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
   border-radius: 10px;
+  text-align: right;
 }
 
 .image-info {
@@ -71,4 +70,8 @@
   padding: 5px;
   border-radius: 5px;
   line-height: 1;
+}
+
+.prompt-image {
+  text-align: center;
 }

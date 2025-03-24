@@ -153,25 +153,23 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
             >
               {!image.isResponse ? (
                 <>
-                  <img
-                    src={image.src}
-                    alt="Uploaded Preview"
-                    className="prompt-view"
-                  />
                   <div className="image-info">
+                    <span className="prompt-image">
+                      <img
+                        src={image.src}
+                        alt="Uploaded Preview"
+                        className="prompt-view"
+                      />
+                    </span>
                     <span className="prompt-description">
                       <strong>
                         <u>File Name</u> :&nbsp;
                       </strong>
-                      {image.name}
-                    </span>
-                    <span className="prompt-description">
+                      {image.name}&nbsp;&nbsp;
                       <strong>
                         <u>File Type</u> :&nbsp;
                       </strong>
-                      {image.type}
-                    </span>
-                    <span className="prompt-description">
+                      {image.type}&nbsp;&nbsp;
                       <strong>
                         <u>File Size</u> :&nbsp;
                       </strong>

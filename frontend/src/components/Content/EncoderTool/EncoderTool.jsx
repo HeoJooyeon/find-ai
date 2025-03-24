@@ -85,6 +85,11 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     } finally {
       setLoading(false);
       setInputValue("");
+      const textarea = document.querySelector(".msg-input-textarea");
+      if (textarea) {
+        textarea.setAttribute("rows", "1");
+        textarea.style.height = "auto";
+      }
     }
   };
 
@@ -163,12 +168,18 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
                       </strong>
                       <br />
                       <br />
-                      {ftxt.content}
+                      <textarea
+                        className="txtarea"
+                        value={ftxt.content}
+                        readOnly
+                      />
                     </span>
                     <span className="text-description">
                       <strong>
                         <u>Requested Type</u> :&nbsp;
                       </strong>
+                      <br />
+                      <br />
                       {ftxt.type}
                     </span>
                     <div className="text-row">

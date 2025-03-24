@@ -86,3 +86,12 @@
 .btn:hover {
   background-color: Silver;
 }
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group .btn {
+  margin-bottom: 1px;
+}

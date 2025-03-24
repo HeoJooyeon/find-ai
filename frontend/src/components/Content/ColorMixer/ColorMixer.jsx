@@ -217,24 +217,26 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
       </div>
 
       <div className="content-main">
-        <i className="bx bx-plus clear-btn" onClick={() => clearAllColors()}>
-          Clear Colors
-        </i>
-        <div className="select-wrapper">
-          <label>Color Format: </label>
-          <select
-            value={colorFormat}
-            onChange={(e) => setColorFormat(e.target.value)}
-          >
-            <option value="hex">HEX</option>
-            <option value="rgb">RGB</option>
-            <option value="name">Name</option>
-          </select>
+        <div className="btn-group">
+          <i className="bx bx-plus clear-btn" onClick={() => clearAllColors()}>
+            Clear Colors
+          </i>
+          <div className="select-wrapper">
+            <label>Color Format: </label>
+            <select
+              value={colorFormat}
+              onChange={(e) => setColorFormat(e.target.value)}
+            >
+              <option value="hex">HEX</option>
+              <option value="rgb">RGB</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
         </div>
 
         {mergedTopics.map((color, index) =>
           !color.isResponse ? (
-            <div key={color.id || index} className="color-container">
+            <div key={color.id || index} className="image-container">
               <span className="text-description">
                 <strong>
                   <u>Input Text</u> :&nbsp;
