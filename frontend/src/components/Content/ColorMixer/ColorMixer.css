@@ -38,10 +38,15 @@
   font-weight: 600;
 }
 
-.input-group {
+.color-group {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.color-group textarea {
+  resize: none;
+  overflow-y: hidden;
 }
 
 .color-label textarea {
@@ -64,27 +69,6 @@
   border-color: #007bff;
   outline: none;
   background: #ffffff;
-}
-
-.copy-button {
-  padding: 6px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: 5px;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-  margin-right: 0.5rem;
-}
-
-.copy-button:hover {
-  background: #0056b3;
-}
-
-.copy-button:active {
-  background: #004099;
 }
 
 .select-wrapper {

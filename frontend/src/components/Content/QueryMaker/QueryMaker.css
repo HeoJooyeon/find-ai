@@ -58,7 +58,6 @@
   text-align: center;
 }
 
-.btn,
 .plus {
   font-size: 1rem;
   cursor: pointer;
@@ -76,22 +75,4 @@
 
 .plus:hover {
   background-color: darkblue;
-}
-
-.btn {
-  background-color: LightSlateGray;
-  color: white;
-}
-
-.btn:hover {
-  background-color: Silver;
-}
-
-.btn-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-group .btn {
-  margin-bottom: 1px;
 }

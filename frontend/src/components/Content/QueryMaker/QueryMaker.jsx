@@ -197,10 +197,13 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
       <div className="content-main">
         <div className="btn-group">
-          <i className="bx bx-plus btn" onClick={() => clearAllPrompt()}>
+          <i className="bx bx-plus clear-btn" onClick={() => clearAllPrompt()}>
             Clear Prompt
           </i>
-          <i className="bx bx-plus btn" onClick={() => clearAllMessages()}>
+          <i
+            className="bx bx-plus clear-btn"
+            onClick={() => clearAllMessages()}
+          >
             Clear Response
           </i>
         </div>

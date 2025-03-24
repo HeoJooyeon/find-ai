@@ -43,23 +43,15 @@
   align-items: center;
 }
 
-.home,
-.emoji {
+.home {
   font-size: 2.5rem;
   color: white;
   cursor: pointer;
   -webkit-text-stroke: 0.5px black;
 }
 
-.home:active,
-.emoji:active {
+.home:active {
   transform: scale(0.9);
-}
-
-.emoji {
-  width: 10rem;
-  display: flex;
-  justify-content: center;
 }
 
 .msg-form {
@@ -95,6 +87,50 @@
 }
 
 .msg-input:focus::placeholder {
+  opacity: 0;
+}
+
+.msg-input-textarea {
+  width: 100%;
+  min-height: 40px;
+  max-height: 300px;
+  padding: 10px;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  line-height: 1.5;
+  resize: none;
+  overflow: hidden;
+  flex-grow: 1;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  overflow-y: auto;
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+.msg-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.msg-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: white;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.msg-input-textarea:focus + .msg-placeholder,
+.msg-input-textarea:not(:placeholder-shown) + .msg-placeholder {
   opacity: 0;
 }
 
@@ -167,4 +203,92 @@
 
 .delete:hover {
   background-color: darkred;
+}
+
+.clear-btn {
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: background 0.3s ease;
+  border: none;
+  background-color: LightSlateGray;
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: Silver;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group .btn {
+  margin-bottom: 1px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  width: 80%;
+  background: linear-gradient(160deg, rgb(70, 70, 80), rgb(30, 30, 40));
+  border-radius: 3rem 3rem 0 3rem;
+  margin-left: auto;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: right;
+}
+
+.text-container textarea {
+  min-height: 25rem;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-description {
+  color: white;
+  white-space: normal;
+  word-break: break-word;
+  overflow: visible;
+  text-overflow: ellipsis;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 1;
+}
+
+.text-row {
+  justify-content: space-between;
+  text-align: right;
+}
+
+.copy-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  margin-right: 0.5rem;
+}
+
+.copy-button:hover {
+  background: #0056b3;
+}
+
+.copy-button:active {
+  background: #004099;
 }

@@ -8,23 +8,6 @@
   position: relative;
 }
 
-.clear-btn {
-  width: 100%;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 5px;
-  transition: background 0.3s ease;
-  border: none;
-  background-color: LightSlateGray;
-  color: white;
-}
-
-.clear-btn:hover {
-  background-color: Silver;
-}
-
 .image-list {
   display: flex;
   flex-direction: column;

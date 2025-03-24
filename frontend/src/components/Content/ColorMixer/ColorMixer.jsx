@@ -270,7 +270,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
 
                 <label className="color-label">
                   <span>Background Color</span>
-                  <div className="input-group">
+                  <div className="color-group">
                     <textarea
                       value={color?.content?.bgColor?.[colorFormat] || ""}
                       readOnly
@@ -288,7 +288,7 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
 
                 <label className="color-label">
                   <span>Text Color</span>
-                  <div className="input-group">
+                  <div className="color-group">
                     <textarea
                       value={color?.content?.textColor?.[colorFormat] || ""}
                       readOnly
@@ -320,7 +320,6 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
               value={inputValue}
               onChange={handleInput}
               rows={1}
-              style={{ resize: "none", overflow: "hidden", height: "1.5em" }}
               onKeyDown={handleKeyDown}
             />
             <span className="msg-placeholder">Type a message...</span>
