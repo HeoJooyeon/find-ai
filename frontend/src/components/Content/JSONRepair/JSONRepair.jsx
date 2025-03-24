@@ -183,7 +183,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-main">
         <i className="bx bx-plus clear-btn" onClick={() => clearAllJsons()}>
-          Clear Jsons
+          Clear JSON
         </i>
         <div className="json-list">
           {fmtJson.map((fjson) => (

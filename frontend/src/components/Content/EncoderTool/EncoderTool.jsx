@@ -159,7 +159,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       </div>
       <div className="content-main">
         <i className="bx bx-plus clear-btn" onClick={() => clearAllTexts()}>
-          Clear Texts
+          Clear Text
         </i>
         <div className="text-list">
           {fmtText.map((ftxt) => (
