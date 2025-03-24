@@ -84,9 +84,9 @@ const ColorMixer = ({ isMenu, setIsMenu }) => {
     if (isConfirmed) {
       localStorage.removeItem("colorData");
       setMergedTopics([]);
-      console.log("ColorMixer::All colors removed.");
+      // console.log("ColorMixer::All colors removed.");
     } else {
-      console.log("ColorMixer::Colors deletion cancelled.");
+      // console.log("ColorMixer::Colors deletion cancelled.");
     }
   };
 

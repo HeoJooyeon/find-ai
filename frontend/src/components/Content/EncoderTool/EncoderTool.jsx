@@ -55,7 +55,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     }
     setLoading(true);
     const requestData = inputValue;
-    console.log("EncoderTool::Sending:", requestData + ":" + instructionText);
+    // console.log("EncoderTool::Sending:", requestData + ":" + instructionText);
     try {
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
@@ -109,7 +109,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
       localStorage.setItem("encoderData", JSON.stringify(updatedTexts));
       return updatedTexts;
     });
-    console.log("EncoderTool::Updated response:", responseText);
+    // console.log("EncoderTool::Updated response:", responseText);
   };
 
   const handleDeleteText = (id) => {
@@ -125,9 +125,9 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
     if (isConfirmed) {
       localStorage.removeItem("encoderData");
       setFmtText([]);
-      console.log("EncoderTool::All texts removed.");
+      // console.log("EncoderTool::All texts removed.");
     } else {
-      console.log("EncoderTool::Texts deletion cancelled.");
+      // console.log("EncoderTool::Texts deletion cancelled.");
     }
   };
 

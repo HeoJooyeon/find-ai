@@ -46,7 +46,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
     }
     setLoading(true);
     const requestData = queryData.trim() || JSON.stringify(fields, null, 2);
-    console.log("QueryMaker::Sending:", requestData + " " + inputValue);
+    // console.log("QueryMaker::Sending:", requestData + " " + inputValue);
     try {
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
@@ -93,7 +93,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
       return updatedMessages;
     });
 
-    console.log("QueryMaker::Updated response:", responseText);
+    // console.log("QueryMaker::Updated response:", responseText);
   };
 
   const handleChangeTableName = (e) => {
@@ -137,9 +137,9 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
     if (isConfirmed) {
       localStorage.removeItem("insertSamples");
       setMessages([]);
-      console.log("QueryMaker::All messages removed.");
+      // console.log("QueryMaker::All messages removed.");
     } else {
-      console.log("QueryMaker::Message deletion cancelled.");
+      // console.log("QueryMaker::Message deletion cancelled.");
     }
   };
 
@@ -160,9 +160,9 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
           },
         ],
       });
-      console.log("QueryMaker::All prompt removed.");
+      // console.log("QueryMaker::All prompt removed.");
     } else {
-      console.log("QueryMaker::Prompt deletion cancelled.");
+      // console.log("QueryMaker::Prompt deletion cancelled.");
     }
   };
 

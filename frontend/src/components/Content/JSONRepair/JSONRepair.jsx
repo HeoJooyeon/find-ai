@@ -39,7 +39,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
     }
     setLoading(true);
     const requestData = inputValue;
-    console.log("JSONRepair::Sending:", requestData);
+    // console.log("JSONRepair::Sending:", requestData);
     try {
       const response = await fetch(
         "https://api.openai.com/v1/chat/completions",
@@ -124,7 +124,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
     };
 
     if (isJson) {
-      console.log("JSONRepair::Parsed JSON Response:", parsed);
+      // console.log("JSONRepair::Parsed JSON Response:", parsed);
     }
 
     setFmtJson((prevTexts) => {
@@ -133,7 +133,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
       return updatedJsons;
     });
 
-    console.log("JSONRepair::Updated response:", responseText);
+    // console.log("JSONRepair::Updated response:", responseText);
   };
 
   const handleInput = (e) => {
@@ -149,9 +149,9 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
     if (isConfirmed) {
       localStorage.removeItem("jsonData");
       setFmtJson([]);
-      console.log("JSONRepair::All jsons removed.");
+      // console.log("JSONRepair::All jsons removed.");
     } else {
-      console.log("JSONRepair::Jsons deletion cancelled.");
+      // console.log("JSONRepair::Jsons deletion cancelled.");
     }
   };
 

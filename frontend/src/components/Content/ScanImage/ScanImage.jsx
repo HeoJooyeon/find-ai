@@ -46,7 +46,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
         return;
       }
       setLoading(true);
-      console.log("ScanImage::Sending:", inputValue);
+      // console.log("ScanImage::Sending:", inputValue);
       try {
         const response = await fetch(
           "https://api.openai.com/v1/chat/completions",
@@ -112,7 +112,7 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
       return updatedImages;
     });
 
-    console.log("ScanImage::Updated response:", responseText);
+    // console.log("ScanImage::Updated response:", responseText);
   };
 
   const handleDeleteImage = (id) => {
@@ -128,9 +128,9 @@ const ScanImage = ({ isMenu, setIsMenu }) => {
     if (isConfirmed) {
       localStorage.removeItem("imageData");
       setImages([]);
-      console.log("ScanImage::All images removed.");
+      // console.log("ScanImage::All images removed.");
     } else {
-      console.log("ScanImage::Images deletion cancelled.");
+      // console.log("ScanImage::Images deletion cancelled.");
     }
   };
 
