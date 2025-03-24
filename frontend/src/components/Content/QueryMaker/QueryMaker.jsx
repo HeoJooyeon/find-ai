@@ -132,7 +132,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
   const clearAllMessages = () => {
     const isConfirmed = window.confirm(
-      "Are you sure you want to delete all messages?"
+      "Are you sure you want to delete all insertSQL?"
     );
     if (isConfirmed) {
       localStorage.removeItem("insertSamples");
@@ -145,7 +145,7 @@ const QueryMaker = ({ isMenu, setIsMenu }) => {
 
   const clearAllPrompt = () => {
     const isConfirmed = window.confirm(
-      "Are you sure you want to delete all prompt?"
+      "Are you sure you want to delete all schema?"
     );
     if (isConfirmed) {
       localStorage.removeItem("tableFields");

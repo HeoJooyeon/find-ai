@@ -120,7 +120,7 @@ const EncoderTool = ({ isMenu, setIsMenu }) => {
 
   const clearAllTexts = () => {
     const isConfirmed = window.confirm(
-      "Are you sure you want to delete all texts?"
+      "Are you sure you want to delete all text?"
     );
     if (isConfirmed) {
       localStorage.removeItem("encoderData");

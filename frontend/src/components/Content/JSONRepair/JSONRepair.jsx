@@ -58,14 +58,14 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
               
               {
                 \"after\": { the corrected JSON object, properly fixed and well-formed },
-                \"text\": \"A clear explanation in English of what was wrong in the input and how it was corrected. If there was no issue, return: 'The JSON format is correct.'\",
-                \"text_ko\": \"A natural Korean translation of the 'text' explanation.\"
+                \"text\": \"A clear explanation in English of what was wrong in the input and how it was corrected. If there was no issue, return: 'The JSON format is not correct.'\",
+                \"text_ko\": \"JSON 형식이 올바르지 않습니다.\"
               }
               
               Strict Requirements:
               - You MUST compare the original input and the corrected version.
               - If there is **any difference** between the input and 'after', then 'text' and 'text_ko' must explain the exact changes.
-              - Do NOT return 'The JSON format is correct.' unless the original input was perfectly valid and no changes were made.
+              - Do NOT return 'The JSON format is not correct.' unless the original input was perfectly valid and no changes were made.
               - Common issues to fix and explain include:
                 - Wrong structure (e.g., object used instead of array for 'columns')
                 - Missing fields (e.g., missing 'columnType')
@@ -144,7 +144,7 @@ const JSONRepair = ({ isMenu, setIsMenu }) => {
 
   const clearAllJsons = () => {
     const isConfirmed = window.confirm(
-      "Are you sure you want to delete all jsons?"
+      "Are you sure you want to delete all json?"
     );
     if (isConfirmed) {
       localStorage.removeItem("jsonData");
