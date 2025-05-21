@@ -1,6 +1,6 @@
 # 🔍 find-ai
 
-FindAI is a personal project built with **React + Vite** and powered by the **OpenAI API**.  
+find-ai is a personal project built with **React + Vite** and powered by the **OpenAI API**.  
 It provides AI-powered utilities to enhance productivity and automate tasks.
 
 ## 📺 Demo Video
@@ -75,9 +75,9 @@ To use OpenAI's API, you need to obtain a **Secret Key** from OpenAI and store i
 
 ---
 
-# 🔍 FindAI
+# 🔍 find-ai
 
-FindAI는 **React + Vite**로 개발된 개인 프로젝트이며, **OpenAI API**를 활용합니다.  
+find-ai는 **React + Vite**로 개발된 개인 프로젝트이며, **OpenAI API**를 활용합니다.  
 AI 기반 유틸리티를 제공하여 생산성을 향상시키고 작업을 자동화할 수 있도록 합니다.
 
 ## 📺 시연 영상
