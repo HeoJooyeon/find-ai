@@ -33,7 +33,7 @@ To set up the project locally, follow these steps:
 git clone https://github.com/HeoJooyeon/find-ai.git
 
 # Navigate to the project folder
-cd FindAI
+cd find-ai
 
 # Navigate to the frontend folder
 cd frontend
@@ -107,10 +107,10 @@ AI 기반 유틸리티를 제공하여 생산성을 향상시키고 작업을 �
 
 ```sh
 # 저장소 클론하기
-git clone https://github.com/HeoJooyeon/FindAI.git
+git clone https://github.com/HeoJooyeon/find-ai.git
 
 # 프로젝트 폴더로 이동
-cd FindAI
+cd find-ai
 
 # 프론트엔드 폴더로 이동
 cd frontend
