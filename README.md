@@ -30,7 +30,7 @@ To set up the project locally, follow these steps:
 
 ```sh
 # Clone the repository
-git clone https://github.com/HeoJooyeon/FindAI.git
+git clone https://github.com/HeoJooyeon/find-ai.git
 
 # Navigate to the project folder
 cd FindAI
